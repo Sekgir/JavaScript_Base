@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Task2</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+</head>
+<body>
+    
+    <script>
+        'use strict';
+
+        let result;
+
+        // Складываем 10 + 10 и получаем 20. Затем, т.к. последняя 10ка является строкой,
+        // производим склеивание 20 и 10 в качестве строк и получаем 2010
+        result = 10 + 10 + "10";
+        console.log(result);
+
+        // Т.к. 2я 10ка является строкой, то производим склеивание и получаем 1010
+        // Затем, склеивая 1010 и 10 получаем 101010
+        result = 10 + "10" + 10;
+        console.log(result);
+
+        // Складываем 10 и 10 получаем 20
+        // +"10" приводим к числу и складываем с 20. Получаем 30
+        result = 10 + 10 + +"10";
+        console.log(result);
+
+        // -"" приводим к -0 и 10 делим на -0 получаем -Infinity
+        result = 10 / -"";
+        console.log(result);
+
+        // +"2,5" не удается привести к числу, поэтому получаем NaN
+        // 10 делим на NaN и получаем NaN
+        result = 10 / +"2,5";
+        console.log(result);
+    </script>
+</body>
+</html>
