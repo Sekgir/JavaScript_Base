@@ -19,21 +19,21 @@
         }
         function getValueInRubles(value) {
             value = parseInt(value);
-            value = String(value);
-            switch (value[value.length - 1]) {
+            let valueText = String(value);
+            switch (valueText[valueText.length - 1]) {
                 case '0':
                 case '5':
                 case '6':
                 case '7':
                 case '8':
                 case '9':
-                    return `${value} рублей`;
+                    return `${valueText} рублей`;
                 case '1':
-                    return `${value} рубль`;
+                    return `${valueText} рубль`;
                 case '2':
                 case '3':
                 case '4':
-                    return `${value} рубля`;
+                    return `${valueText} рубля`;
                 default:
                     return undefined;
             }
