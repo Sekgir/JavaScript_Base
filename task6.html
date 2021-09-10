@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task6</title>
+</head>
+<body>
+    <script>
+        'use strict';
+
+        console.log(getInvoiceMessage(101));
+        console.log(getInvoiceMessage(10020));
+        console.log(getInvoiceMessage(120104));
+
+        function getInvoiceMessage(value) {
+            return `Ваша сумма в ${getValueInRubles(value)} успешно зачислена.`;
+        }
+        function getValueInRubles(value) {
+            value = parseInt(value);
+            value = String(value);
+            switch (value[value.length - 1]) {
+                case '0':
+                case '5':
+                case '6':
+                case '7':
+                case '8':
+                case '9':
+                    return `${value} рублей`;
+                case '1':
+                    return `${value} рубль`;
+                case '2':
+                case '3':
+                case '4':
+                    return `${value} рубля`;
+                default:
+                    return undefined;
+            }
+        }
+    </script>
+</body>
+</html>
